@@ -1,28 +1,20 @@
 import queue
 class newNode:
-    def __init__(self,data):
-        self.data=data
+    def __init__(self,val):
+        self.val=val
         self.left=None
         self.right=None
+        self.next=None
 def LevelOrder(root):
-    q = queue.Queue()
-    res = []
-    if root is None:
-        return None
-    q.put(root)
-    while not q.empty():
-        a = []
-        size = q.qsize()
-        while size != 0:
-            curr = q.get()
-            a.append(curr.data)
-            if curr.left is not None:
-                q.put(curr.left)
-            if curr.right is not None:
-                q.put(curr.right)
-            size -= 1
-        if len(a) != 0:
-            res.append(a)
+    q=[root]
+    res=[]
+    while q:
+        n=q.pop(0)
+        res.append(n.val)
+        if n.left:
+            q.append(n.left)
+        if n.right:
+            q.append(n.right)
     return res
 
 if __name__ == '__main__':

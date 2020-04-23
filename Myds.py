@@ -5,19 +5,14 @@ class MyDS:
 
     # Constructor (creates a list and a hash)
     def __init__(self):
-
         # A resizable array
         self.arr = []
-
         # A hash where keys are lists elements
         # and values are indexes of the list
         self.hashd = {}
-
         # A Theta(1) function to add an element
-
     # to MyDS data structure
     def add(self, x):
-
         # If element is already present,
         # then nothing has to be done
         if x in self.hashd:
@@ -35,7 +30,6 @@ class MyDS:
 
     # from MyDS data structure
     def remove(self, x):
-
         # Check if element is present
         index = self.hashd.get(x, None)
         if index == None:
@@ -53,7 +47,6 @@ class MyDS:
         self.arr[index], \
         self.arr[size - 1] = self.arr[size - 1], \
                              self.arr[index]
-
         # Remove last element (This is O(1))
         del self.arr[-1]
 
@@ -75,10 +68,7 @@ class MyDS:
     # otherwise none
     def search(self, x):
         return self.hashd.get(x, None)
-
     # Driver Code
-
-
 if __name__ == "__main__":
     ds = MyDS()
     ds.add(10)
