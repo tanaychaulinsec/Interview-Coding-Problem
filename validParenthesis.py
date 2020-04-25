@@ -11,5 +11,5 @@ def isValid( s):
             return False
 
     return False if stack else True
-s="())"
+s="(({})[]"
 print(isValid(s))
