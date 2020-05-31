@@ -5,6 +5,8 @@ def canJump( nums):
             return False
         maxjump-=1
         maxjump=max(maxjump,nums[i])
+        if maxjump+i>=len(nums):
+            return  True
     return  True
 nums=[3,2,1,0,3]
 print(canJump(nums))

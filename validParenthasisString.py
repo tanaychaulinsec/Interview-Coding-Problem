@@ -5,8 +5,6 @@ def isValid( s):
         left += 1 if s[i] in '(*' else -1
         if left < 0:
             return False
-        t=s[str_len - 1 - i]
-        p=s[i]
         right += 1 if s[str_len - 1 - i] in '*)' else -1
         if right < 0:
             return False

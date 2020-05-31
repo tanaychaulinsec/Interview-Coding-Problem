@@ -9,7 +9,7 @@ def isValid(root):
 	def dfs(root,MAX_INT,MIN_INT):
 		if not root:
 			return True
-		if MIN_INT>=root.val>=MAX_INT:
+		if MIN_INT>=root.val or root.val>=MAX_INT:
 			return  False
 		left=right=True
 		if root.left:
